@@ -1,25 +1,25 @@
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
-/* Smooth Scrolling */
+/* Enable smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #388E3C; /* Green color */
-    padding: 10px 20px;
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: #388E3C; /* Green color */
+    padding: 15px;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -46,66 +46,89 @@ nav ul li a:hover {
 
 /* Header Section */
 header {
-    text-align: center;
-    background-color: #388E3C; /* Green color */
+    background-image: url('https://your-image-url.com'); /* Add a URL of a background image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
     color: white;
-    padding: 60px 20px; /* Increased padding for spacing */
+    text-align: center;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 header h1 {
-    margin: 0;
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-/* About Section */
-#about {
-    background-color: #f9f9f9;
+header p {
+    font-size: 1.5em;
+}
+
+/* Section Styles */
+section {
     padding: 40px 20px;
+    margin: 20px 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+section.show {
+    opacity: 1;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 /* Skills Section */
-#skills {
-    background-color: #ffffff;
-    padding: 40px 20px;
-}
-
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-.skills-list div {
-    background-color: #e7f3e7; /* Light green background for skill items */
+#skills .skill-item {
+    background-color: #e7f3e7;
+    margin: 10px;
     padding: 20px;
     border-radius: 8px;
+    display: inline-block;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.skills-list h3 {
+.skill-item h3 {
     margin-top: 0;
-}
-
-/* Contact Section */
-#contact {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#contact h2 {
-    margin-bottom: 20px;
 }
 
 /* Footer Section */
 footer {
-    text-align: center;
     background-color: #388E3C; /* Green color */
     color: white;
     padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .skill-item {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
