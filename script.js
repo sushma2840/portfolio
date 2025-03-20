@@ -7,5 +7,5 @@ window.addEventListener("scroll", function() {
         if (sectionTop < windowHeight * 0.75) {
             section.classList.add("show");
         }
-    });
+    }); 
 });
